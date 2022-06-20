@@ -1,0 +1,16 @@
+{
+    "name": "workstation/03_good",
+    "autoload": {
+        "psr-4": {
+            "Workstation\\03Good\\": "src/",
+            "app\\":"./"
+        }
+    },
+    "authors": [
+        {
+            "name": "darkopet",
+            "email": "darkodepetrovski@gmail.com"
+        }
+    ],
+    "require": {}
+}
