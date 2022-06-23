@@ -9,6 +9,8 @@
 
     $router = new Router();
 
+    // echo "good".'<br><br>';
+
     // $router->get('', [ProductController::class, 'index']);
     // $router->get('/', [ProductController::class, 'index']);
     // $router->get('/products', [ProductController::class, 'index']);
@@ -23,7 +25,9 @@
     // $router->post('/products/delete', [ProductController::class, 'delete']);
     // $router->post('/public/delete', [ProductController::class, 'delete']);
 
-    $router->get('/', [Controller::class, 'index']);
+    // echo "good".'<br><br>';
+
+    $router->get('' , [Controller::class, 'index']);
     $router->get('/Employees/create', [Controller::class, 'create']);
     $router->post('/Employees/create', [Controller::class, 'create']);
     $router->get('/Employees/update', [Controller::class, 'update']);

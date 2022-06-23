@@ -15,17 +15,21 @@
             // var_dump($Employees);
             // echo '</pre>';
             
-            echo '<pre>';
-            var_dump($router);
-            echo '</pre>';
+            // echo '<pre>';
+            // var_dump($router);
+            // echo '</pre>';
 
             $search = $_GET['search'] ?? '';
+            
+            echo '<pre>';
+            var_dump($search);
+            echo '</pre>';
 
             $employees = $router->db->getEmployees($search); 
             
-            echo '<pre>';
-            var_dump($employees);
-            echo '</pre>';
+            // echo '<pre>';
+            // var_dump($employees);
+            // echo '</pre>';
 
             $router->renderView('Employees/index', 
             [
