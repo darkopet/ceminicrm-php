@@ -22,7 +22,7 @@
             $search = $_GET['search'] ?? '';
             
             echo '<pre>';
-            var_dump($search);
+            var_dump($router);
             echo '</pre>';
 
             $employees = $router->db->getEmployees($search); 

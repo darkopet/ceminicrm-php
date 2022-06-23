@@ -1,6 +1,9 @@
 <h1>Employees AdminPanel</h1>
     <p>
-        <a href="/Employees/create" class="btn btn-success">Insert New Employee</a>
+        <a href="/views/Employees/create.php" class="btn btn-success">Insert New Employee</a>
+    </p>
+    <p>
+        <a href="/views/Employees/update.php" class="btn btn-success">Update Employee</a>
     </p>
 
     <form>

@@ -41,6 +41,7 @@ class Router
         {
             $currentUrl = substr($currentUrl, 0, strpos($currentUrl, '?'));
         }
+                
                 echo "<pre>";
                 var_dump($currentUrl);
                 echo "</pre>";  
