@@ -13,7 +13,7 @@
             $this->pdo = new PDO('mysql:host=localhost;port=3306;dbname=ceminicrm_php', 'phpmyadmin', 'phpmyadmindb00+--+');
             # If the connection to the database is not succesfull:
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+            # SQL Database self-healing?
             self::$db = $this;
         }
 

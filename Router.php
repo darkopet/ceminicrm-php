@@ -4,7 +4,6 @@
 
 namespace app;
 use app\Database;
-use app\models\Employees;
 
 class Router 
 {
@@ -29,8 +28,13 @@ class Router
 
     public function resolve()
     {
-        $currentUrl = $_SERVER['REQUEST_URI'] ?? '/';
-          
+        $currentUrl = $_SERVER['SERVER_NAME'] ?? '/';
+        echo "<pre>";
+        var_dump($_SERVER);
+        echo "</pre><br>";
+        echo "<pre>";
+        var_dump($_SERVER);
+        echo "</pre><br>";    
         if(strpos($currentUrl, '?') !== false)
         {
             $currentUrl = substr($currentUrl, 0, strpos($currentUrl, '?'));
@@ -44,7 +48,10 @@ class Router
         }
         else 
         { $fn = $this->postRoutes[$currentUrl] ?? null; }
-            
+        echo "<pre>";
+        var_dump($fn);
+        echo "</pre>";  
+
         if($fn) 
         {
             call_user_func($fn, $this);

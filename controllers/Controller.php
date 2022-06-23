@@ -10,7 +10,7 @@
     {
         public function index(Router $router)
         {
-            // echo "Index page".'<br>';
+            echo "Index page".'<br>';
             // echo '<pre>';
             // var_dump($Employees);
             // echo '</pre>';

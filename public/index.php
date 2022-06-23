@@ -7,10 +7,6 @@
     use app\Router;
     use app\controllers\Controller;
 
-    // echo '<pre>';
-    // var_dump($_SERVER);
-    // echo '</pre>';
-
     $router = new Router();
     
     // echo '<pre>';
