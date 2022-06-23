@@ -10,11 +10,11 @@ class Router
 {
     public array $getRoutes = [];
     public array $postRoutes = [];
-    public Database $db1;
+    public Database $db;
 
     public function __construct()
     {
-        $this->db1 = new Database();
+        $this->db = new Database();
     }
 
     public function get($url, $fn)

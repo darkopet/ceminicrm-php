@@ -17,7 +17,7 @@
         
             $search = $_GET['search'] ?? '';
             //var_dump($search);
-            $employees = $router->db1->getEmployees($search); 
+            $employees = $router->db->getEmployees($search); 
 
             $router->renderView('Employees/index', 
             [
@@ -66,7 +66,7 @@
             // var_dump($id);
             if(!$id){ header('Location: /Employees'); exit; }
             $errors = []; 
-            $EmployeeData = $router->db1->getEmployeeById($id);
+            $EmployeeData = $router->db->getEmployeeById($id);
             // var_dump($EmployeeData);
             // echo "<pre>";
             // var_dump($EmployeeData);
@@ -95,7 +95,7 @@
         {
             $id = $_POST['id'] ?? null;
             if(!$id) { header('Location: /Employees'); exit; }
-            $router->db1->deleteEmployee($id);
+            $router->db->deleteEmployee($id);
             header('Location: /Employees');
             # echo "Delete page".'<br>';
         }

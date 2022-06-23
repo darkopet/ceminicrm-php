@@ -43,9 +43,9 @@ use app\controllers\Controller;
                 //   mkdir(dirname(__DIR__.'/../public/'.$this->imagePath));
                 //   move_uploaded_file($this->imageFile['tmp_name'], __DIR__.'/../public/'.$this->imagePath); 
                 // }
-                $db1 = Database::$db1;
-                if($this->id) { $db1->updateEmployee($this); }
-                else { $db1->createEmployee($this); }
+                $db = Database::$db;
+                if($this->id) { $db->updateEmployee($this); }
+                else { $db->createEmployee($this); }
             }
             return $errors;
         }
