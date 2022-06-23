@@ -10,7 +10,7 @@ use app\Database;
         public ?string $LastName = null;
         public ?int $Company = null;
         public ?string $CompanyEmail = null;
-        public ?string $Phone = null;
+        public ?int $Phone = null;
 
         # Data loading function - via the controller
         public function load($data)
