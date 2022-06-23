@@ -34,10 +34,10 @@
                     <td><?php echo $employee['CompanyEmail'] ?></td>
                     <td><?php echo $employee['Phone'] ?></td>
                     <td>
-                        <a href="/Employees/update?id=<?php echo $employee['emp_id'] ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
+                        <a href="/Employees/update?id=<?php echo $employee['id'] ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
                         
                         <form style="display: inline-block" method="post" action="Employees/delete">                        
-                            <input type="hidden" name="emp_id" value="<?php echo $employee['emp_id'] ?> ">
+                            <input type="hidden" name="id" value="<?php echo $employee['id'] ?> ">
                             <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
                         </form>
                     </td>

@@ -3,7 +3,6 @@
     namespace app\controllers;
     use app\models\Employees;
     use app\Router;
-    use app\Database;
 
     /** Class CONTROLLER */
 
@@ -63,11 +62,11 @@
 
         public function update(Router $router)
         {
-            $emp_id = $_GET['id'] ?? null;
-            // var_dump($emp_id);
-            if(!$emp_id){ header('Location: /Employees'); exit; }
+            $id = $_GET['id'] ?? null;
+            // var_dump($id);
+            if(!$id){ header('Location: /Employees'); exit; }
             $errors = []; 
-            $EmployeeData = $router->db1->getEmployeeById($emp_id);
+            $EmployeeData = $router->db1->getEmployeeById($id);
             // var_dump($EmployeeData);
             // echo "<pre>";
             // var_dump($EmployeeData);
@@ -94,9 +93,9 @@
 
         public function delete(Router $router)
         {
-            $emp_id = $_POST['emp_id'] ?? null;
-            if(!$emp_id) { header('Location: /Employees'); exit; }
-            $router->db1->deleteEmployee($emp_id);
+            $id = $_POST['id'] ?? null;
+            if(!$id) { header('Location: /Employees'); exit; }
+            $router->db1->deleteEmployee($id);
             header('Location: /Employees');
             # echo "Delete page".'<br>';
         }

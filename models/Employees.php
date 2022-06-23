@@ -7,7 +7,7 @@ use app\controllers\Controller;
 
     class Employees
     {
-        public ?int $emp_id = null;
+        public ?int $id = null;
         public ?string $FirstName = null;
         public ?string $LastName = null;
         public ?int $Company = null;
@@ -17,7 +17,7 @@ use app\controllers\Controller;
         # Data loading function - via the controller
         public function load($data)
         {
-            $this->emp_id = $data['emp_id'] ?? null;
+            $this->id = $data['id'] ?? null;
             $this->FirstName = $data['FirstName'];
             $this->LastName = $data['LastName'];
             $this->Company = $data['Company'];
@@ -44,7 +44,7 @@ use app\controllers\Controller;
                 //   move_uploaded_file($this->imageFile['tmp_name'], __DIR__.'/../public/'.$this->imagePath); 
                 // }
                 $db1 = Database::$db1;
-                if($this->emp_id) { $db1->updateEmployee($this); }
+                if($this->id) { $db1->updateEmployee($this); }
                 else { $db1->createEmployee($this); }
             }
             return $errors;
