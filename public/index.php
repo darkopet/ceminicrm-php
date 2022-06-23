@@ -41,7 +41,7 @@
     
     echo "chckpnt3".'<br><br>';
 
-    $router->resolve();
+    $router->resolve(); // PROBLEM!
 
     echo "<br><br>";
     echo "chckpnt4".'<br><br>';
