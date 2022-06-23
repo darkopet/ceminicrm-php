@@ -31,11 +31,11 @@
 
     $router->get('' , [Controller::class, 'index']);
     
-    $router->get('/views/Employees/create', [Controller::class, 'create']);
-    $router->post('/views/Employees/create', [Controller::class, 'create']);
+    $router->get('/Employees/create', [Controller::class, 'create']);
+    $router->post('/Employees/create', [Controller::class, 'create']);
     
-    $router->get('/views/Employees/update', [Controller::class, 'update']);
-    $router->post('/views/Employees/update', [Controller::class, 'update']);
+    $router->get('/Employees/update', [Controller::class, 'update']);
+    $router->post('/Employees/update', [Controller::class, 'update']);
 
     $router->post('/views/Employees/delete', [Controller::class, 'delete']);
     
@@ -43,4 +43,5 @@
 
     $router->resolve();
 
+    echo "<br><br>";
     echo "chckpnt4".'<br><br>';

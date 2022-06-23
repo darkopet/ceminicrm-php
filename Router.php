@@ -41,7 +41,6 @@ class Router
         {
             $currentUrl = substr($currentUrl, 0, strpos($currentUrl, '?'));
         }
-                
                 echo "<pre>";
                 var_dump($currentUrl);
                 echo "</pre>";  
@@ -51,11 +50,13 @@ class Router
         if($method === 'GET')
         {   
             // $getRoutes = $currentUrl;
+                
                 // echo "<pre>";
                 // var_dump($getRoutes);
-                // echo "</pre>";  
+                // echo "</pre>"; 
+
             $fn = $this->getRoutes[$currentUrl] ?? null;
-        }
+        }   
         else 
         { $fn = $this->postRoutes[$currentUrl] ?? null; }
 
@@ -63,9 +64,9 @@ class Router
                 var_dump($fn);
                 echo "</pre>";  
 
-                // echo "<pre>";
-                // var_dump($this);
-                // echo "</pre>";  
+                echo "<pre>";
+                var_dump($this);
+                echo "</pre>";  
 
         if($fn) 
         {
