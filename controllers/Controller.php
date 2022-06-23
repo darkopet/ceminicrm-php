@@ -21,10 +21,6 @@
 
             $search = $_GET['search'] ?? '';
             
-            echo '<pre>';
-            var_dump($router);
-            echo '</pre>';
-
             $employees = $router->db->getEmployees($search); 
             
             // echo '<pre>';

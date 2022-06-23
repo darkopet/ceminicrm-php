@@ -18,7 +18,10 @@ class Router
 
     public function get($url, $fn)
     {
-        $this->getRoutes[$url] = $fn;
+        $this->getRoutes[$url] = $fn; // LAST CHECK -> SEE IN BROWSER !!!
+                echo "<pre>";
+                var_dump($this);
+                echo "</pre>"; 
     }
 
     public function post($url, $fn)
