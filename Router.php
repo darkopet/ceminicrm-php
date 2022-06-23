@@ -32,22 +32,29 @@ class Router
         echo "<pre>";
         var_dump($_SERVER);
         echo "</pre><br>";
+
         echo "<pre>";
-        var_dump($_SERVER);
+        var_dump($currentUrl);
         echo "</pre><br>";    
+        
         if(strpos($currentUrl, '?') !== false)
         {
             $currentUrl = substr($currentUrl, 0, strpos($currentUrl, '?'));
         }
         
+        echo "<pre>";
+        var_dump($currentUrl);
+        echo "</pre><br>";  
+
         $method = $_SERVER['REQUEST_METHOD'];
             
         if($method === 'GET')
         {   
-            $fn = $this->getRoutes[$currentUrl] ?? null;
+            $fn = $currentUrl ?? null;
         }
         else 
         { $fn = $this->postRoutes[$currentUrl] ?? null; }
+
         echo "<pre>";
         var_dump($fn);
         echo "</pre>";  

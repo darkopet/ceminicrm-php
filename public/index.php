@@ -8,10 +8,6 @@
     use app\controllers\Controller;
 
     $router = new Router();
-    
-    // echo '<pre>';
-    // var_dump($_SERVER);
-    // echo '</pre>';
 
     // $router->get('', [ProductController::class, 'index']);
     // $router->get('/', [ProductController::class, 'index']);
@@ -36,9 +32,5 @@
     $router->get('/Employees/update', [Controller::class, 'update']);
     $router->post('/Employees/update', [Controller::class, 'update']);
     $router->post('/Employees/delete', [Controller::class, 'delete']);
-
-    // echo '<pre>';
-    // var_dump($_SERVER);
-    // echo '</pre>'; 
 
     $router->resolve();

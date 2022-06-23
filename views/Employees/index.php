@@ -3,7 +3,6 @@
         <a href="/Employees/create" class="btn btn-success">Insert New Employee</a>
     </p>
 
-
     <form>
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Search For Employees" name="search" value="<?php echo $search ?>">
@@ -25,7 +24,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($employees as $i => $employee): ?>
+            <?php foreach ($mployees as $i => $employee): ?>
                 <tr>
                     <th scope="row"><?php echo $i+1 ?></th>
                     <td><?php echo $employee['FirstName'] ?></td>

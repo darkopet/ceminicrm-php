@@ -2,8 +2,6 @@
 
 namespace app\models;
 use app\Database;
-use app\helpers\UtilHelper;
-use app\controllers\Controller;
 
     class Employees
     {

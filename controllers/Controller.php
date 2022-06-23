@@ -15,15 +15,15 @@
             // var_dump($Employees);
             // echo '</pre>';
         
-            $search = $_GET['search'] ?? '';
-            //var_dump($search);
-            $employees = $router->db->getEmployees($search); 
+            // $search = $_GET['search'] ?? ''
 
-            $router->renderView('Employees/index', 
-            [
-                'employees' => $employees,
-                'search' =>  $search
-            ]);
+            // $employees = $router->db->getEmployees($search); 
+
+            // $router->renderView('Employees/index', 
+            // [
+            //     'employees' => $employees,
+            //     'search' =>  $search
+            // ]);
         }
 
         public function create(Router $router)
