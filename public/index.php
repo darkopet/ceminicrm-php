@@ -24,9 +24,6 @@
     // $router->post('/public/delete', [ProductController::class, 'delete']);
 
     $router->get('/', [Controller::class, 'index']);
-    $router->get('/Employees', [Controller::class, 'index']);
-    $router->get('/Employees/', [Controller::class, 'index']);
-    $router->get('/Employees/index', [Controller::class, 'index']);
     $router->get('/Employees/create', [Controller::class, 'create']);
     $router->post('/Employees/create', [Controller::class, 'create']);
     $router->get('/Employees/update', [Controller::class, 'update']);

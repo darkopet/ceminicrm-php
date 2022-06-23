@@ -1,8 +1,8 @@
 {
-    "name": "workstation/03_good",
+    "name": "workstation/ceminicrm-php",
     "autoload": {
         "psr-4": {
-            "Workstation\\03Good\\": "src/",
+            "Workstation\\ceminicrmphp\\": "src/",
             "app\\":"./"
         }
     },

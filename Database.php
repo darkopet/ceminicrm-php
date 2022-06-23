@@ -8,7 +8,7 @@
     {
         public \PDO $pdo;
         public static Database $db;
-        
+
         public function __construct() # CONSTRUCT the database connection
         {   # DSN string = defines the connection string of the database
             $this->pdo = new PDO('mysql:host=localhost;port=3306;dbname=ceminicrm_php', 'phpmyadmin', 'phpmyadmindb00+--+');

@@ -59,6 +59,10 @@ class Router
         var_dump($fn);
         echo "</pre>";  
 
+        echo "<pre>";
+        var_dump($this);
+        echo "</pre>";  
+
         if($fn) 
         {
             call_user_func($fn, $this);

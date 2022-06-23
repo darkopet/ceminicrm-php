@@ -10,20 +10,28 @@
     {
         public function index(Router $router)
         {
-            echo "Index page".'<br>';
+            // echo "Index page".'<br>';
             // echo '<pre>';
             // var_dump($Employees);
             // echo '</pre>';
-        
-            // $search = $_GET['search'] ?? ''
+            
+            echo '<pre>';
+            var_dump($router);
+            echo '</pre>';
 
-            // $employees = $router->db->getEmployees($search); 
+            $search = $_GET['search'] ?? '';
 
-            // $router->renderView('Employees/index', 
-            // [
-            //     'employees' => $employees,
-            //     'search' =>  $search
-            // ]);
+            $employees = $router->db->getEmployees($search); 
+            
+            echo '<pre>';
+            var_dump($employees);
+            echo '</pre>';
+
+            $router->renderView('Employees/index', 
+            [
+                'employees' => $employees,
+                'search' =>  $search
+            ]);
         }
 
         public function create(Router $router)
