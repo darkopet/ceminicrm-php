@@ -35,9 +35,9 @@ class Router
     public function resolve()
     {
         $currentUrl = $_SERVER['REQUEST_URI'] ?? '/';
-                // echo "<pre>";
-                // var_dump($_SERVER);
-                // echo "</pre>";
+                echo "<pre>";
+                var_dump($_SERVER);
+                echo "</pre>";
 
                 // echo "<pre>";
                 // var_dump($currentUrl);
@@ -76,6 +76,9 @@ class Router
 
         if($fn) 
         {
+                echo "<pre>";
+                var_dump($fn);
+                echo "</pre>";  
             call_user_func($fn, $this);
         }
         else { echo "Page Not Found"; }
