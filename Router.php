@@ -27,6 +27,9 @@ class Router
     public function post($url, $fn)
     {
         $this->postRoutes[$url] = $fn;
+                // echo "<pre>";
+                // var_dump($this);
+                // echo "</pre>"; 
     }
 
     public function resolve()

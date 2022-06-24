@@ -34,7 +34,7 @@
     $router->get('/public/' , [Controller::class, 'index']);
     $router->get('/Employees/' , [Controller::class, 'index']);
 
-    $router->get('/Employees/create', [Controller::class, 'create']);
+    $router->get('/Employees/create.php', [Controller::class, 'create']);
     $router->post('/Employees/create', [Controller::class, 'create']);
     
     $router->get('/Employees/update', [Controller::class, 'update']);
