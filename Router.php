@@ -70,9 +70,9 @@ class Router
                 var_dump($fn);
                 echo "</pre>";  
 
-                // echo "<pre>";
-                // var_dump($this);
-                // echo "</pre>";  
+                echo "<pre>";
+                var_dump($this);
+                echo "</pre>";  
 
         if($fn) 
         {
@@ -88,7 +88,7 @@ class Router
            $$key = $value;
         } 
         ob_start(); # To automatically send the content to the browser via local buffer
-        include_once __DIR__."/views/Employees/$view.php"; # The content that is being sent
+        include_once __DIR__."/views/employees/$view.php"; # The content that is being sent
         $content = ob_get_clean(); # Cleaning the local buffer, value of the view html file in the $content
         include_once __DIR__."/views/_layout.php";        
     }

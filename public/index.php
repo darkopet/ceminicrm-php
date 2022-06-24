@@ -21,6 +21,7 @@
 
     // $router->get('/products/create', [ProductController::class, 'create']);
     // $router->post('/products/create', [ProductController::class, 'create']);
+
     // $router->get('/products/update', [ProductController::class, 'update']);
     // $router->post('/products/update', [ProductController::class, 'update']);
     
@@ -31,16 +32,17 @@
 
 
     $router->get('' , [Controller::class, 'index']);
-    $router->get('/public/' , [Controller::class, 'index']);
-    $router->get('/Employees/' , [Controller::class, 'index']);
+    $router->get('/' , [Controller::class, 'index']);
+    $router->get('/public' , [Controller::class, 'index']);
+    $router->get('/employees' , [Controller::class, 'index']);
 
-    $router->get('/Employees/create.php', [Controller::class, 'create']);
-    $router->post('/Employees/create', [Controller::class, 'create']);
+    $router->get('/employees/create.php', [Controller::class, 'create']);
+    $router->post('/employees/create', [Controller::class, 'create']);
     
-    $router->get('/Employees/update', [Controller::class, 'update']);
-    $router->post('/Employees/update', [Controller::class, 'update']);
+    $router->get('/employees/update', [Controller::class, 'update']);
+    $router->post('/employees/update', [Controller::class, 'update']);
 
-    $router->post('/views/Employees/delete', [Controller::class, 'delete']);
+    $router->post('/views/employees/delete', [Controller::class, 'delete']);
     
     echo "chckpnt3".'<br><br>';
 

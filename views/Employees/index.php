@@ -1,14 +1,14 @@
-<h1>Employees AdminPanel</h1>
+<h1>employees AdminPanel</h1>
     <p>
-        <a href="/views/Employees/create.php" class="btn btn-success">Insert New Employee</a>
+        <a href="/views/employees/create.php" class="btn btn-success">Insert New Employee</a>
     </p>
     <p>
-        <a href="/views/Employees/update.php" class="btn btn-success">Update Employee</a>
+        <a href="/views/employees/update.php" class="btn btn-success">Update Employee</a>
     </p>
 
     <form>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search For Employees" name="search" value="<?php echo $search ?>">
+            <input type="text" class="form-control" placeholder="Search For employees" name="search" value="<?php echo $search ?>">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="submit">Search</button>
                 </div>
@@ -36,9 +36,9 @@
                     <td><?php echo $employee['CompanyEmail'] ?></td>
                     <td><?php echo $employee['Phone'] ?></td>
                     <td>
-                        <a href="/Employees/update?id=<?php echo $employee['id'] ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
+                        <a href="/employees/update?id=<?php echo $employee['id'] ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
                         
-                        <form style="display: inline-block" method="post" action="Employees/delete">                        
+                        <form style="display: inline-block" method="post" action="employees/delete">                        
                             <input type="hidden" name="id" value="<?php echo $employee['id'] ?> ">
                             <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
                         </form>

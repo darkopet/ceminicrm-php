@@ -1,7 +1,7 @@
 <?php
 
     namespace app\controllers;
-    use app\models\Employees;
+    use app\models\employees;
     use app\Router;
 
     /** Class CONTROLLER */
@@ -12,7 +12,7 @@
         {
             echo "Index page".'<br>';
             // echo '<pre>';
-            // var_dump($Employees);
+            // var_dump($employees);
             // echo '</pre>';
             
             // echo '<pre>';
@@ -21,13 +21,13 @@
 
             $search = $_GET['search'] ?? '';
             
-            $employees = $router->db->getEmployees($search); 
+            $employees = $router->db->getemployees($search); 
             
             // echo '<pre>';
             // var_dump($employees);
             // echo '</pre>';
 
-            $router->renderView('Employees/index', 
+            $router->renderView('employees/index', 
             [
                 'employees' => $employees,
                 'search' =>  $search
@@ -55,14 +55,14 @@
                 $EmployeeData['Phone'] = $_POST['Phone'] ?? null;
 
                 # Instance of the class Employee created before
-                $Employee = new Employees();
+                $Employee = new employees();
                 # Loading into the model
                 $Employee->load($EmployeeData);
                 $errors = $Employee->save();
-                if(empty($errors)){ header('Location: /Employees'); exit; }
+                if(empty($errors)){ header('Location: /employees'); exit; }
             }
 
-            $router->renderView('Employees/create', [
+            $router->renderView('employees/create', [
                 'Employee' => $EmployeeData,
                 'errors' => $errors
             ]);
@@ -72,7 +72,7 @@
         {
             $id = $_GET['id'] ?? null;
             // var_dump($id);
-            if(!$id){ header('Location: /Employees'); exit; }
+            if(!$id){ header('Location: /employees'); exit; }
             $errors = []; 
             $EmployeeData = $router->db->getEmployeeById($id);
             // var_dump($EmployeeData);
@@ -87,13 +87,13 @@
                 $EmployeeData['CompanyEmail'] = $_POST['CompanyEmail'] ?? null;
                 $EmployeeData['Phone'] = $_POST['Phone'] ?? null;
                 # Instance of the class Employee created before
-                $Employee = new Employees();
+                $Employee = new employees();
                 # Loading into the model
                 $Employee->load($EmployeeData);
                 $errors = $Employee->save();
-                if(empty($errors)){ header('Location: /Employees'); exit; }
+                if(empty($errors)){ header('Location: /employees'); exit; }
             } 
-            $router->renderView('Employees/update', [
+            $router->renderView('employees/update', [
                 'Employee'=> $EmployeeData,
                 'errors' => $errors
             ]);
@@ -102,9 +102,9 @@
         public function delete(Router $router)
         {
             $id = $_POST['id'] ?? null;
-            if(!$id) { header('Location: /Employees'); exit; }
+            if(!$id) { header('Location: /employees'); exit; }
             $router->db->deleteEmployee($id);
-            header('Location: /Employees');
+            header('Location: /employees');
             # echo "Delete page".'<br>';
         }
     }

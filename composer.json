@@ -2,7 +2,7 @@
     "name": "workstation/ceminicrm-php",
     "autoload": {
         "psr-4": {
-            "Workstation\\ceminicrmphp\\": "src/",
+            "Workstation\\ceminicrm-php\\": "src/",
             "app\\":"./"
         }
     },

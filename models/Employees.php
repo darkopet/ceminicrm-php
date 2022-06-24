@@ -3,7 +3,7 @@
 namespace app\models;
 use app\Database;
 
-    class Employees
+    class employees
     {
         public ?int $id = null;
         public ?string $FirstName = null;

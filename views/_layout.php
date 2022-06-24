@@ -14,7 +14,7 @@
     <link rel="stylesheet" 
           href="/app.css">
 
-    <title>Employees AdminPanel</title>
+    <title>employees AdminPanel</title>
   </head>
 
   <body>
