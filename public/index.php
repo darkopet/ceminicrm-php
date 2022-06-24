@@ -29,8 +29,10 @@
 
     // echo "good".'<br><br>';
 
+
+    $router->get('' , [Controller::class, 'index']);
     $router->get('/public/' , [Controller::class, 'index']);
-    $router->get('/Employees' , [Controller::class, 'index']);
+    $router->get('/Employees/' , [Controller::class, 'index']);
 
     $router->get('/Employees/create', [Controller::class, 'create']);
     $router->post('/Employees/create', [Controller::class, 'create']);

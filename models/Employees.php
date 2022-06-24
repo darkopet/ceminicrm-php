@@ -21,6 +21,7 @@ use app\Database;
             $this->Company = $data['Company'];
             $this->CompanyEmail = $data['CompanyEmail'] ?? null;
             $this->Phone = $data['Phone'] ?? null;
+            var_dump($this);
         }
 
         public function save()
