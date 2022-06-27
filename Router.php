@@ -34,7 +34,7 @@ class Router
 
     public function resolve()
     {
-        $currentUrl = $_SERVER['REQUEST_URI'] ?? '/';
+        $currentUrl = $_SERVER['REQUEST_URI'] ?? 'employees/create';
                 echo "<pre>";
                 var_dump($_SERVER);
                 echo "</pre>";

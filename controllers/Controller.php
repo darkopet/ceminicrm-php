@@ -8,32 +8,6 @@
 
     class Controller
     {
-        public function index(Router $router)
-        {
-            echo "Index page".'<br>';
-            // echo '<pre>';
-            // var_dump($employees);
-            // echo '</pre>';
-            
-            // echo '<pre>';
-            // var_dump($router);
-            // echo '</pre>';
-
-            $search = $_GET['search'] ?? '';
-            
-            $employees = $router->db->getemployees($search); 
-            
-            // echo '<pre>';
-            // var_dump($employees);
-            // echo '</pre>';
-
-            $router->renderView('employees/index', 
-            [
-                'employees' => $employees,
-                'search' =>  $search
-            ]);
-        }
-
         public function create(Router $router)
         {   
             $errors = [];
