@@ -25,28 +25,28 @@ class Router
     {
         $this->postRoutes[$url] = $fn;
 
-                echo "<pre>";
-                var_dump($this);
-                echo "</pre>"; 
+                // echo "<pre>";
+                // var_dump($this);
+                // echo "</pre>"; 
     }
 
     public function resolve()
     {
         $currentUrl = $_SERVER['REQUEST_URI'] ?? '';
 
-                echo "<pre>";
-                var_dump($_SERVER);
-                echo "</pre>";
+                // echo "<pre>";
+                // var_dump($_SERVER);
+                // echo "</pre>";
 
-                echo "<pre>";
-                var_dump($currentUrl);
-                echo "</pre>";    
+                // echo "<pre>";
+                // var_dump($currentUrl);
+                // echo "</pre>";    
         
         if(strpos($currentUrl, '?') !== false)
         {
             $currentUrl = substr($currentUrl, 0, strpos($currentUrl, '?'));
         }
-                echo "<pre>";
+                echo "<br><pre>";
                 var_dump($currentUrl);
                 echo "</pre>";  
 
@@ -66,13 +66,13 @@ class Router
 
             $fn = $this->getRoutes[$currentUrl] ?? null; // PROBLEM - Companies Subroutes not filling $fn
 
-                // echo "<pre>";
-                // var_dump($this);
-                // echo "</pre>";  
-
                 echo "<pre>";
                 var_dump($fn);      // RESULT: NULL
-                echo "</pre>";  
+                echo "</pre>"; 
+
+                echo "<pre>";
+                var_dump($this);
+                echo "</pre>";   
         }   
         else 
         { $fn = $this->postRoutes[$currentUrl] ?? null; }
