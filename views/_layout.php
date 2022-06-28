@@ -14,7 +14,7 @@
     <link rel="stylesheet" 
           href="/app.css">
 
-    <title>Companies AdminPanel</title>
+    <title>Mini CRM AdminPanel</title>
   </head>
 
       <body>

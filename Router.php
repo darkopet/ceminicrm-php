@@ -58,13 +58,17 @@ class Router
             
         if($method === 'GET')
         {   
-            // $getRoutes = $currentUrl;
+                // $getRoutes = $currentUrl;
                 
                 // echo "<pre>";
                 // var_dump($getRoutes);
                 // echo "</pre>"; 
 
             $fn = $this->getRoutes[$currentUrl] ?? null; // PROBLEM !!! 
+
+                // echo "<pre>";
+                // var_dump($fn);
+                // echo "</pre>";  
         }   
         else 
         { $fn = $this->postRoutes[$currentUrl] ?? null; }
