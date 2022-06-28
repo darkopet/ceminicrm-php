@@ -20,10 +20,7 @@ class Router
 
     public function get($url, $fn)
     {
-        $this->getRoutes[$url] = $fn; // LAST CHECK -> SEE IN BROWSER !!!
-                // echo "<pre>";
-                // var_dump($this);
-                // echo "</pre>"; 
+        $this->getRoutes[$url] = $fn;
     }
 
     public function post($url, $fn)
@@ -38,54 +35,58 @@ class Router
     {
         $currentUrl = $_SERVER['REQUEST_URI'] ?? '';
 
-                // echo "<pre>";
-                // var_dump($_SERVER);
-                // echo "</pre>";
+                echo "<pre>";
+                var_dump($_SERVER);
+                echo "</pre>";
 
-                // echo "<pre>";
-                // var_dump($currentUrl);
-                // echo "</pre>";    
+                echo "<pre>";
+                var_dump($currentUrl);
+                echo "</pre>";    
         
         if(strpos($currentUrl, '?') !== false)
         {
             $currentUrl = substr($currentUrl, 0, strpos($currentUrl, '?'));
         }
-                // echo "<pre>";
-                // var_dump($currentUrl);
-                // echo "</pre>";  
+                echo "<pre>";
+                var_dump($currentUrl);
+                echo "</pre>";  
 
         $method = $_SERVER['REQUEST_METHOD'];
+
+                echo "<pre>";
+                var_dump($method);
+                echo "</pre>";  
             
         if($method === 'GET')
         {   
                 // $getRoutes = $currentUrl;
                 
-                // echo "<pre>";
-                // var_dump($getRoutes);
-                // echo "</pre>"; 
+                echo "<pre>";
+                var_dump($currentUrl);
+                echo "</pre>"; 
 
             $fn = $this->getRoutes[$currentUrl] ?? null; // PROBLEM - Companies Subroutes not filling $fn
 
-                // echo "<pre>";
-                // var_dump($fn);
-                // echo "</pre>";  
+                echo "<pre>";
+                var_dump($fn);
+                echo "</pre>";  
         }   
         else 
         { $fn = $this->postRoutes[$currentUrl] ?? null; }
 
-                // echo "<pre>";
-                // var_dump($fn);
-                // echo "</pre>";  
+                echo "<pre>";
+                var_dump($fn);
+                echo "</pre>";  
 
-                // echo "<pre>";
-                // var_dump($this);
-                // echo "</pre>";  
+                echo "<pre>";
+                var_dump($this);
+                echo "</pre>";  
 
         if($fn) 
         {
-                // echo "<pre>";
-                // var_dump($fn);
-                // echo "</pre>";  
+                echo "<pre>";
+                var_dump($fn);
+                echo "</pre>";  
 
             call_user_func($fn, $this);
         }

@@ -22,6 +22,7 @@
         public static function create(Router $router)
         {   
             $errors = [];
+            
             $EmployeeData = [
                 'FirstName' => '',
                 'LastName' => '',

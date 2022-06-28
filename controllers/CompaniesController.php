@@ -89,6 +89,7 @@
             if(!$id) { header('Location: /companies'); exit; }
 
             $router->db->deleteCompany($id);
+
             header('Location: /companies');
         }
     }
