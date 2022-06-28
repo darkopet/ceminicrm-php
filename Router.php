@@ -64,7 +64,7 @@ class Router
                 // var_dump($getRoutes);
                 // echo "</pre>"; 
 
-            $fn = $this->getRoutes[$currentUrl] ?? null; // PROBLEM !!! 
+            $fn = $this->getRoutes[$currentUrl] ?? null; // PROBLEM - Companies Subroutes not filling $fn
 
                 // echo "<pre>";
                 // var_dump($fn);
