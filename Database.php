@@ -2,7 +2,7 @@
 
     namespace app;
     use PDO;
-    use app\models\employees;
+    use app\models\Employee;
 
     class Database
     {
@@ -44,7 +44,7 @@
             return $statement->fetch(PDO::FETCH_ASSOC);
         }
 
-        public function createEmployee(employees $employee)
+        public function createEmployee(Employee $employee)
         {
             # Make an insert to the database of the superglobal $_POST data
             $statement = $this->pdo->prepare("INSERT INTO Employees (FirstName, LastName, Company, CompanyEmail, Phone) 
@@ -58,7 +58,7 @@
                 $statement->execute();
         }
 
-        public function updateEmployee(employees $employee)
+        public function updateEmployee(Employee $employee)
         {
                 # Make an insert to the database of the superglobal $_POST data
                 $statement = $this->pdo->prepare("UPDATE Employees SET FirstName=:FirstName, LastName=:LastName, Company=:Company, CompanyEmail=:CompanyEmail, Phone=:Phone WHERE id = :id");

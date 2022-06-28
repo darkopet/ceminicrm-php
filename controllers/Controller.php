@@ -1,7 +1,6 @@
 <?php
-
     namespace app\controllers;
-    use app\models\employees;
+    use app\models\Employee;
     use app\Router;
 
     /** Class CONTROLLER */
@@ -46,7 +45,7 @@
                 $EmployeeData['Phone'] = $_POST['Phone'] ?? null;
 
                 # Instance of the class Employee created before
-                $Employee = new employees();
+                $Employee = new Employee();
                 # Loading into the model
                 $Employee->load($EmployeeData);
                 $errors = $Employee->save();
@@ -78,7 +77,7 @@
                 $EmployeeData['CompanyEmail'] = $_POST['CompanyEmail'] ?? null;
                 $EmployeeData['Phone'] = $_POST['Phone'] ?? null;
                 # Instance of the class Employee created before
-                $Employee = new employees();
+                $Employee = new Employee();
                 # Loading into the model
                 $Employee->load($EmployeeData);
                 $errors = $Employee->save();
