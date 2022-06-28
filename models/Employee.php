@@ -1,5 +1,7 @@
 <?php
+
 namespace app\models;
+
 use app\Database;
 
     class Employee
@@ -12,14 +14,14 @@ use app\Database;
         public ?int $Phone = null;
 
         # Data loading function - via the controller
-        public function load($data)
+        public function load($empdata)
         {
-            $this->id = $data['id'] ?? null;
-            $this->FirstName = $data['FirstName'];
-            $this->LastName = $data['LastName'];
-            $this->Company = $data['Company'];
-            $this->CompanyEmail = $data['CompanyEmail'] ?? null;
-            $this->Phone = $data['Phone'] ?? null;
+            $this->id = $empdata['id'] ?? null;
+            $this->FirstName = $empdata['FirstName'];
+            $this->LastName = $empdata['LastName'];
+            $this->Company = $empdata['Company'];
+            $this->CompanyEmail = $empdata['CompanyEmail'] ?? null;
+            $this->Phone = $empdata['Phone'] ?? null;
         }
 
         public function save()

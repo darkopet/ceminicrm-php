@@ -4,6 +4,8 @@
 
 namespace app;
 use app\Database;
+use app\controllers\EmployeesController;
+use app\controllers\CompaniesController;
 
 class Router 
 {

@@ -5,7 +5,7 @@
 
     /** Class CONTROLLER */
 
-    class Controller
+    class EmployeesController
     {
         public static function index(Router $router)
         {
@@ -41,9 +41,11 @@
 
                 # Instance of the class Employee created before
                 $Employee = new Employee();
-                # Loading into the model
+                # Loading into the model    
                 $Employee->load($EmployeeData);
+                
                 $errors = $Employee->save();
+
                 if(empty($errors)){ header('Location: /employees'); exit; }
             }
 

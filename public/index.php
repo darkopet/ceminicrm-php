@@ -4,23 +4,36 @@
     require_once __DIR__.'/../vendor/autoload.php';
 
     use app\Router;
-    use app\controllers\Controller;
+    use app\controllers\EmployeesController;
+    use app\controllers\CompaniesController;
 
     $router = new Router();
 
     // echo "chckpnt2".'<br><br>';
 
-    $router->get('/' , [Controller::class, 'index']);
-    $router->get('/employees' , [Controller::class, 'index']);
-    $router->get('/employees/index', [Controller::class, 'index']);
+    $router->get('/' , [EmployeesController::class, 'index']);
+    $router->get('/employees' , [EmployeesController::class, 'index']);
+    $router->get('/employees/index', [EmployeesController::class, 'index']);
 
-    $router->get('/employees/create', [Controller::class, 'create']);
-    $router->post('/employees/create', [Controller::class, 'create']);
+    $router->get('/employees/create', [EmployeesController::class, 'create']);
+    $router->post('/employees/create', [EmployeesController::class, 'create']);
     
-    $router->get('/employees/update', [Controller::class, 'update']);
-    $router->post('/employees/update', [Controller::class, 'update']);
+    $router->get('/employees/update', [EmployeesController::class, 'update']);
+    $router->post('/employees/update', [EmployeesController::class, 'update']);
 
-    $router->post('/employees/delete', [Controller::class, 'delete']);
+    $router->post('/employees/delete', [EmployeesController::class, 'delete']);
+
+
+    $router->get('/companies', [CompaniesController::class, 'index']);
+    $router->get('/companies/index', [CompaniesController::class, 'index']);
+
+    $router->get('companies/create', [CompaniesController::class, 'create']);
+    $router->post('companies/create', [CompaniesController::class, 'create']);
+
+    $router->get('companies/update', [CompaniesController::class, 'update']);
+    $router->post('companies/update', [CompaniesController::class, 'update']);
+
+    $router->post('companies/delete', [CompaniesController::class, 'delete']);
     
     // echo "chckpnt3".'<br><br>';
 
