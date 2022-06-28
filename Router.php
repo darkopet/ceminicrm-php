@@ -68,19 +68,23 @@ class Router
             $fn = $this->getRoutes[$currentUrl] ?? null; // PROBLEM - Companies Subroutes not filling $fn
 
                 echo "<pre>";
+                var_dump($this);
+                echo "</pre>";  
+
+                echo "<pre>";
                 var_dump($fn);
                 echo "</pre>";  
         }   
         else 
         { $fn = $this->postRoutes[$currentUrl] ?? null; }
 
-                echo "<pre>";
-                var_dump($fn);
-                echo "</pre>";  
+                    echo "<pre>";
+                    var_dump($fn);
+                    echo "</pre>";  
 
-                echo "<pre>";
-                var_dump($this);
-                echo "</pre>";  
+                // echo "<pre>";
+                // var_dump($this);
+                // echo "</pre>";  
 
         if($fn) 
         {
