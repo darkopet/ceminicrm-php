@@ -27,7 +27,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($mployees as $i => $employee): ?>
+            <?php foreach ($employees as $i => $employee): ?>
                 <tr>
                     <th scope="row"><?php echo $i+1 ?></th>
                     <td><?php echo $employee['FirstName'] ?></td>

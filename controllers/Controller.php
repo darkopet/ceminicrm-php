@@ -9,11 +9,6 @@
     {
         public static function index(Router $router)
         {
-            // echo "Index page".'<br>';
-            // echo '<pre>';
-            // var_dump($products);
-            // echo '</pre>';
-        
             $search = $_GET['search'] ?? '';
             $employees = $router->db->getEmployees($search); 
 
@@ -61,14 +56,13 @@
         public static function update(Router $router)
         {
             $id = $_GET['id'] ?? null;
-            // var_dump($id);
+
             if(!$id){ header('Location: /employees'); exit; }
+
             $errors = []; 
+            
             $EmployeeData = $router->db->getEmployeeById($id);
-            // var_dump($EmployeeData);
-            // echo "<pre>";
-            // var_dump($EmployeeData);
-            // echo "</pre>";
+
             if($_SERVER['REQUEST_METHOD'] === 'POST')
             {  
                 $EmployeeData['FirstName'] = $_POST['FirstName'];

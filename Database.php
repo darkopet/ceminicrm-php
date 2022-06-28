@@ -1,5 +1,4 @@
 <?php
-
     namespace app;
     use PDO;
     use app\models\Employee;
@@ -27,7 +26,7 @@
                 $statement->bindValue(':CompanyEmail', "%$search%");
             } else {
                 # Query in the database in order to select employees:
-                $statement = $this->pdo->prepare('SELECT * FROM Employees ORDER BY id DESC');
+                $statement = $this->pdo->prepare('SELECT * FROM Employees ORDER BY id ASC');
             }    
             # Make the query 
             $statement->execute();
