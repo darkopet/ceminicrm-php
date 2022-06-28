@@ -91,7 +91,7 @@ class Router
                 // var_dump($fn);
                 // echo "</pre>";  
 
-            call_user_func($fn, $this);
+            echo call_user_func($fn, $this);
         }
         else { echo "Page Not Found"; }
     }
