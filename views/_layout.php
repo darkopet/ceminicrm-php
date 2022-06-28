@@ -1,4 +1,4 @@
-<!doctype html
+<!doctype html>
 <html lang="en">
 
   <head>
@@ -14,7 +14,7 @@
     <link rel="stylesheet" 
           href="/app.css">
 
-    <title>Employees AdminPanel</title>
+    <title>Companies AdminPanel</title>
   </head>
 
       <body>
