@@ -5,7 +5,7 @@
 
     /** Class CONTROLLER */
 
-    class EmployeesController
+    class CompaniesController
     {
         public static function index(Router $router)
         {

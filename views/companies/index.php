@@ -34,7 +34,7 @@
                     <td><?php echo $company['logo'] ?></td>
                     <td><?php echo $company['website'] ?></td>
                     <td>
-                        <a href="/companies/update?id=<?php echo $employee['id'] ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
+                        <a href="/companies/update?id=<?php echo $company['id'] ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
 
                         <form style="display: inline-block" method="post" action="companies/delete">
                             <input type="hidden" name="id" value="<?php echo $company['id'] ?> ">
