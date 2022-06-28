@@ -1,5 +1,7 @@
 <?php
+    
     namespace app\controllers;
+    
     use app\models\Company;
     use app\Router;
 
@@ -7,7 +9,7 @@
 
     class CompaniesController
     {
-        public static function index(Router $router)
+        public function index(Router $router)
         {
             $search = $_GET['search'] ?? '';
             $companies = $router->db->getCompanies($search);
@@ -20,7 +22,7 @@
             );
         }
 
-        public static function create(Router $router)
+        public function create(Router $router)
         {
             $errors = [];
 
@@ -47,13 +49,13 @@
                 if(empty($errors)){ header('Location: /companies'); exit; }
             }
 
-                $router->renderView('companies/create', [
+            $router->renderView('companies/create', [
                 'Company' => $CompanyData,
                 'errors' => $errors
             ]);
         }
 
-        public static function update(Router $router)
+        public function update(Router $router)
         {
             $id = $_GET['id'] ?? null;
             if(!$id) { header('Location: /companies'); exit; }
@@ -83,13 +85,12 @@
             ]);
         }
 
-        public static function delete(Router $router)
+        public function delete(Router $router)
         {
             $id = $_POST['id'] ?? null;
             if(!$id) { header('Location: /companies'); exit; }
 
             $router->db->deleteCompany($id);
-
             header('Location: /companies');
         }
     }

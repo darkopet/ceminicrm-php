@@ -1,5 +1,7 @@
 <?php
+
     namespace app\controllers;
+    
     use app\models\Employee;
     use app\Router;
 
@@ -7,19 +9,20 @@
 
     class EmployeesController
     {
-        public static function index(Router $router)
+        public function index(Router $router)
         {
             $search = $_GET['search'] ?? '';
             $employees = $router->db->getEmployees($search); 
 
             $router->renderView('employees/index', 
-            [
-                'employees' => $employees,
-                'search' =>  $search
-            ]);
+                [
+                    'employees' => $employees,
+                    'search' => $search
+                ]
+            );
         }
 
-        public static function create(Router $router)
+        public function create(Router $router)
         {   
             $errors = [];
             
@@ -56,10 +59,9 @@
             ]);
         }
 
-        public static function update(Router $router)
+        public function update(Router $router)
         {
             $id = $_GET['id'] ?? null;
-
             if(!$id){ header('Location: /employees'); exit; }
 
             $errors = []; 
@@ -86,12 +88,12 @@
             ]);
         }
 
-        public static function delete(Router $router)
+        public function delete(Router $router)
         {
             $id = $_POST['id'] ?? null;
             if(!$id) { header('Location: /employees'); exit; }
+
             $router->db->deleteEmployee($id);
             header('Location: /employees');
-            # echo "Delete page".'<br>';
         }
     }

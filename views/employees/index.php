@@ -38,7 +38,7 @@
                     <td>
                         <a href="/employees/update?id=<?php echo $employee['id'] ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
                         
-                        <form style="display: inline-block" method="post" action="employees/delete">                        
+                        <form style="display: inline-block" method="post" action="/employees/delete">                        
                             <input type="hidden" name="id" value="<?php echo $employee['id'] ?> ">
                             <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
                         </form>

@@ -4,8 +4,6 @@
 
 namespace app;
 use app\Database;
-use app\controllers\EmployeesController;
-use app\controllers\CompaniesController;
 
 class Router 
 {
@@ -26,9 +24,10 @@ class Router
     public function post($url, $fn)
     {
         $this->postRoutes[$url] = $fn;
-                // echo "<pre>";
-                // var_dump($this);
-                // echo "</pre>"; 
+
+                echo "<pre>";
+                var_dump($this);
+                echo "</pre>"; 
     }
 
     public function resolve()
@@ -53,9 +52,9 @@ class Router
 
         $method = $_SERVER['REQUEST_METHOD'];
 
-                echo "<pre>";
-                var_dump($method);
-                echo "</pre>";  
+                // echo "<pre>";
+                // var_dump($method);
+                // echo "</pre>";  
             
         if($method === 'GET')
         {   
@@ -67,20 +66,20 @@ class Router
 
             $fn = $this->getRoutes[$currentUrl] ?? null; // PROBLEM - Companies Subroutes not filling $fn
 
-                echo "<pre>";
-                var_dump($this);
-                echo "</pre>";  
+                // echo "<pre>";
+                // var_dump($this);
+                // echo "</pre>";  
 
                 echo "<pre>";
-                var_dump($fn);
+                var_dump($fn);      // RESULT: NULL
                 echo "</pre>";  
         }   
         else 
         { $fn = $this->postRoutes[$currentUrl] ?? null; }
 
-                    echo "<pre>";
-                    var_dump($fn);
-                    echo "</pre>";  
+                    // echo "<pre>";
+                    // var_dump($fn);
+                    // echo "</pre>";  
 
                 // echo "<pre>";
                 // var_dump($this);
@@ -88,9 +87,9 @@ class Router
 
         if($fn) 
         {
-                echo "<pre>";
-                var_dump($fn);
-                echo "</pre>";  
+                // echo "<pre>";
+                // var_dump($fn);
+                // echo "</pre>";  
 
             call_user_func($fn, $this);
         }

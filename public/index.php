@@ -7,33 +7,34 @@
     use app\controllers\EmployeesController;
     use app\controllers\CompaniesController;
 
+    // $db = new \app\Database();
     $router = new Router();
 
     // echo "chckpnt2".'<br><br>';
 
-    $router->get('/' , [EmployeesController::class, 'index']);
-    $router->get('/employees' , [EmployeesController::class, 'index']);
-    $router->get('/employees/index', [EmployeesController::class, 'index']);
+    $router->get('/' , [new EmployeesController(), 'index']);
+    $router->get('/employees' , [new EmployeesController(), 'index']);
+    $router->get('/employees/index', [new EmployeesController(), 'index']);
 
-    $router->get('/employees/create', [EmployeesController::class, 'create']);
-    $router->post('/employees/create', [EmployeesController::class, 'create']);
+    $router->get('/employees/create', [new EmployeesController(), 'create']);
+    $router->post('/employees/create', [new EmployeesController(), 'create']);
     
-    $router->get('/employees/update', [EmployeesController::class, 'update']);
-    $router->post('/employees/update', [EmployeesController::class, 'update']);
+    $router->get('/employees/update', [new EmployeesController(), 'update']);
+    $router->post('/employees/update', [new EmployeesController(), 'update']);
 
-    $router->post('/employees/delete', [EmployeesController::class, 'delete']);
+    $router->post('/employees/delete', [new EmployeesController(), 'delete']);
 
 
-    $router->get('/companies', [CompaniesController::class, 'index']);
-    $router->get('/companies/index', [CompaniesController::class, 'index']);
+    $router->get('/companies', [new CompaniesController(), 'index']);
+    $router->get('/companies/index', [new CompaniesController(), 'index']);
 
-    $router->get('companies/create', [CompaniesController::class, 'create']);
-    $router->post('companies/create', [CompaniesController::class, 'create']);
+    $router->get('companies/create', [new CompaniesController(), 'create']);
+    $router->post('companies/create', [new CompaniesController(), 'create']);
 
-    $router->get('companies/update', [CompaniesController::class, 'update']);
-    $router->post('companies/update', [CompaniesController::class, 'update']);
+    $router->get('companies/update', [new CompaniesController(), 'update']);
+    $router->post('companies/update', [new CompaniesController(), 'update']);
 
-    $router->post('companies/delete', [CompaniesController::class, 'delete']);
+    $router->post('companies/delete', [new CompaniesController(), 'delete']);
     
     // echo "chckpnt3".'<br><br>';
 
