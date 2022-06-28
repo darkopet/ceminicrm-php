@@ -18,7 +18,7 @@
             self::$db = $this;
         }
 
-        public function getemployees($search = '') # GET employees from the database via quering to select & fetching the database content
+        public function getEmployees($search = '') # GET employees from the database via quering to select & fetching the database content
         {
             $search = $_GET['search'] ?? '';
             if($search) {

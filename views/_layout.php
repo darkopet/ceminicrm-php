@@ -14,14 +14,12 @@
     <link rel="stylesheet" 
           href="/app.css">
 
-    <title>employees AdminPanel</title>
+    <title>Employees AdminPanel</title>
   </head>
 
-  <body>
-
-        <?php echo $content; ?>
-
-  </body>
+      <body>
+            <?php echo $content; ?>
+      </body>
 
 </html>
 

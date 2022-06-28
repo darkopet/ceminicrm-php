@@ -4,7 +4,7 @@
           <div> <?php echo $error ?> </div>
         <?php endforeach; ?>  
       </div>
-  <?php endif; ?>
+<?php endif; ?>
 
   <form action="" method="post" enctype="multipart/form-data">
 

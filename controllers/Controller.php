@@ -8,7 +8,24 @@
 
     class Controller
     {
-        public function create(Router $router)
+        public static function index(Router $router)
+        {
+            // echo "Index page".'<br>';
+            // echo '<pre>';
+            // var_dump($products);
+            // echo '</pre>';
+        
+            $search = $_GET['search'] ?? '';
+            $employees = $router->db->getEmployees($search); 
+
+            $router->renderView('employees/index', 
+            [
+                'employees' => $employees,
+                'search' =>  $search
+            ]);
+        }
+
+        public static function create(Router $router)
         {   
             $errors = [];
             $EmployeeData = [
@@ -42,7 +59,7 @@
             ]);
         }
 
-        public function update(Router $router)
+        public static function update(Router $router)
         {
             $id = $_GET['id'] ?? null;
             // var_dump($id);
@@ -73,7 +90,7 @@
             ]);
         }
 
-        public function delete(Router $router)
+        public static function delete(Router $router)
         {
             $id = $_POST['id'] ?? null;
             if(!$id) { header('Location: /employees'); exit; }
