@@ -13,7 +13,7 @@ class Company
     public ?string $website = null;
 
     public function load($cmpdata)
-    {   
+    {
         $this->id = $cmpdata['id'] ?? null;
         $this->Name = $cmpdata['Name'];
         $this->CompanyEmail = $cmpdata['CompanyEmail'] ?? null;
@@ -25,15 +25,19 @@ class Company
     {
         $errors = [];
 
-        if(!$this->Name){$errors = 'Company Name is required!';}
-
-        if(empty($errors)) 
-        {
-            $db = Database::$db;
-            if($this->id) { $db->updateCompany($this); }
-            else { $db->createCompany($this); }
+        if (!$this->Name) {
+            $errors = 'Company Name is required!';
         }
-            
-        return $errors;    
-    } 
+
+        if (empty($errors)) {
+            $db = Database::$db;
+            if ($this->id) {
+                $db->updateCompany($this);
+            } else {
+                $db->createCompany($this);
+            }
+        }
+
+        return $errors;
+    }
 }

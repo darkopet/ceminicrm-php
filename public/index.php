@@ -1,6 +1,5 @@
 <?php
-    // echo "chckpnt1".'<br><br>';
-    
+    // echo "chckpnt1".'<br><br>'; 
     require_once __DIR__.'/../vendor/autoload.php';
 
     use app\Router;

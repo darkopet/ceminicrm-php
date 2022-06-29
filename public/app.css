@@ -1,11 +1,14 @@
-body {
+body 
+{
     padding: 50px
 }
 
-.thumb-image {
+.thumb-image 
+{
     width: 50px
 }
 
-.update-image {
+.update-image 
+{
     width: 120px
 }
